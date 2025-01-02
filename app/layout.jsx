@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavbarDemo from './reusableComponents/NavbarDemo'
+import { ShootingStarsAndStarsBackgroundDemo } from "./reusableComponents/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       >
         <NavbarDemo />
         {children}
+        <ShootingStarsAndStarsBackgroundDemo />
       </body>
     </html>
   );

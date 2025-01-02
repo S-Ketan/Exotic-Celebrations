@@ -93,7 +93,7 @@ function Navbar({ className }) {
       </div>
       <button
         className={
-          " text-xl sm:hidden  text-black  dark:text-white p-4 fixed top-0 right-0 " +
+          " text-xl sm:hidden  text-gray-500  dark:text-white p-4 fixed top-0 right-0 " +
           (isSidebarOpen ? "hidden" : "block")
         }
         onClick={toggleSidebar}
@@ -102,7 +102,7 @@ function Navbar({ className }) {
       </button>
       {isSidebarOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex">
-          <div className="w-64 bg-white dark:bg-black h-full shadow-lg z-50 p-6">
+          <div className="w-64 bg-gray-100 dark:bg-black h-full shadow-lg z-50 p-6">
             <button
               className="text-black dark:text-gray-500 text-2xl absolute top-4 right-4"
               onClick={toggleSidebar}
