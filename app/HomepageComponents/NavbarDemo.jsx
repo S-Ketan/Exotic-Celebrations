@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 function NavbarDemo() {
   return (
-    <div className="relative w-full flex items-center justify-center">
+    <div className="relative w-full flex items-center justify-center z-50">
       <Navbar className="top-2" />
     </div>
   );
@@ -36,7 +36,13 @@ function Navbar({ className }) {
         <Menu setActive={setActive}>
           <MenuItem setActive={setActive} item="Home" href="/" />
           <MenuItem setActive={setActive} item="Client" href="/" />
-          <MenuItem setActive={setActive} item="Portfolio" href="/" />
+          <MenuItem setActive={setActive} item="Portfolio" active={active}>
+            <div className="flex flex-col space-y-4 text-sm">
+              <HoveredLink href="/image-gallery">Image Gallery</HoveredLink>
+              <HoveredLink href="/video-gallery">Videos Gallery</HoveredLink>
+              
+            </div>
+          </MenuItem>
           <MenuItem setActive={setActive} item="Team" href="/" />
 
           <MenuItem setActive={setActive} active={active} item="Services">
@@ -47,8 +53,12 @@ function Navbar({ className }) {
               <HoveredLink href="/venue-management">
                 Venue Management
               </HoveredLink>
-              <HoveredLink href="/artist-management">Artist Management</HoveredLink>
-              <HoveredLink href="/video-production">Video Production</HoveredLink>
+              <HoveredLink href="/artist-management">
+                Artist Management
+              </HoveredLink>
+              <HoveredLink href="/video-production">
+                Video Production
+              </HoveredLink>
             </div>
           </MenuItem>
           <MenuItem setActive={setActive} active={active} item="Contact">
@@ -117,12 +127,9 @@ function Navbar({ className }) {
                   id="dropdownButton"
                   className="w-full flex justify-between  rounded text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
                   onClick={() => {
-                   portfolioMenu.classList.toggle("hidden");
-                   portfolioIcon.textContent =portfolioMenu.classList.contains(
-                      "hidden"
-                    )
-                      ? "▼"
-                      : "▲";
+                    portfolioMenu.classList.toggle("hidden");
+                    portfolioIcon.textContent =
+                      portfolioMenu.classList.contains("hidden") ? "▼" : "▲";
                   }}
                 >
                   <span>Portfolio</span>
@@ -132,10 +139,18 @@ function Navbar({ className }) {
                   id="portfolioMenu"
                   className="hidden  mt-2 space-y-2 rounded"
                 >
-                  <p className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black " href="/image-gallery">Image Gallery</p>
-                  <p className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black " href="/video-gallery">Videos Gallery</p>
-                  
-                  
+                  <p
+                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
+                    href="/image-gallery"
+                  >
+                    Image Gallery
+                  </p>
+                  <p
+                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
+                    href="/video-gallery"
+                  >
+                    Videos Gallery
+                  </p>
                 </div>
               </div>
               <p
@@ -149,8 +164,8 @@ function Navbar({ className }) {
                   id="dropdownButton"
                   className="w-full flex justify-between  rounded text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
                   onClick={() => {
-                   serviceMenu.classList.toggle("hidden");
-                   serviceIcon.textContent =serviceMenu.classList.contains(
+                    serviceMenu.classList.toggle("hidden");
+                    serviceIcon.textContent = serviceMenu.classList.contains(
                       "hidden"
                     )
                       ? "▼"
@@ -164,13 +179,42 @@ function Navbar({ className }) {
                   id="serviceMenu"
                   className="hidden  mt-2 space-y-2 rounded"
                 >
-                  <p className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black " href="/weddings">Weddings</p>
-                  <p className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black " href="/corporate">Corporate</p>
-                  <p className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black " href="/party-planning">Party Planning</p>
-                  <p className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black " href="/venue-management">Venue Management</p>
-                  <p className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black " href="/artist-management">Artist Management</p>
-                  <p className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black " href="/video-production">Video Production</p>
-                  
+                  <p
+                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
+                    href="/weddings"
+                  >
+                    Weddings
+                  </p>
+                  <p
+                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
+                    href="/corporate"
+                  >
+                    Corporate
+                  </p>
+                  <p
+                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
+                    href="/party-planning"
+                  >
+                    Party Planning
+                  </p>
+                  <p
+                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
+                    href="/venue-management"
+                  >
+                    Venue Management
+                  </p>
+                  <p
+                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
+                    href="/artist-management"
+                  >
+                    Artist Management
+                  </p>
+                  <p
+                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
+                    href="/video-production"
+                  >
+                    Video Production
+                  </p>
                 </div>
               </div>
               <p

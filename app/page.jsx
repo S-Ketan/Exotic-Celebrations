@@ -1,12 +1,15 @@
-import React from 'react'
-import NavbarDemo from './navbar'
+import React from "react";
+import { VortexDemo } from "./HomepageComponents/vortexBackground";
+
 const page = () => {
   return (
-    <div>
-        <NavbarDemo />
+    <>
+      <div>
+        <VortexDemo />
+      </div>
+     
+    </>
+  );
+};
 
-        </div>
-  )
-}
-
-export default page
+export default page;
