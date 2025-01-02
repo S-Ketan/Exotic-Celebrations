@@ -29,7 +29,7 @@ function Navbar({ className }) {
     <>
       <div
         className={cn(
-          "fixed top-10 inset-x-0 max-w-2xl text-sm sm:text-base mx-auto z-50 hidden sm:block",
+          "fixed top-0 mt-0 inset-x-0 w-full text-sm sm:text-base mx-auto z-50 hidden sm:block",
           className
         )}
       >
