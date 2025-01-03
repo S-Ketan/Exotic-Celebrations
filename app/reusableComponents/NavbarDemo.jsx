@@ -35,7 +35,7 @@ function Navbar({ className }) {
       >
         <Menu setActive={setActive}>
           <MenuItem setActive={setActive} item="Home" href="/" />
-          <MenuItem setActive={setActive} item="Client" href="/" />
+          <MenuItem setActive={setActive} item="Client" href="/client" />
           <MenuItem setActive={setActive} item="Portfolio" active={active}>
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="/image-gallery">Image Gallery</HoveredLink>
@@ -43,7 +43,7 @@ function Navbar({ className }) {
               
             </div>
           </MenuItem>
-          <MenuItem setActive={setActive} item="Team" href="/" />
+          <MenuItem setActive={setActive} item="Team" href="/team" />
 
           <MenuItem setActive={setActive} active={active} item="Services">
             <div className="flex flex-col space-y-4 text-sm">
@@ -110,12 +110,12 @@ function Navbar({ className }) {
               &times;
             </button>
             <div className="mt-10 space-y-4">
-              <p
+              <a
                 className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
                 href="/"
               >
                 Home
-              </p>
+              </a>
               <p
                 className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
                 href="/client"
@@ -179,42 +179,42 @@ function Navbar({ className }) {
                   id="serviceMenu"
                   className="hidden  mt-2 space-y-2 rounded"
                 >
-                  <p
+                  <a
                     className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
                     href="/weddings"
                   >
                     Weddings
-                  </p>
-                  <p
+                  </a>
+                  <a
                     className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
                     href="/corporate"
                   >
                     Corporate
-                  </p>
-                  <p
+                  </a>
+                  <a
                     className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
                     href="/party-planning"
                   >
                     Party Planning
-                  </p>
-                  <p
+                  </a>
+                  <a
                     className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
                     href="/venue-management"
                   >
                     Venue Management
-                  </p>
-                  <p
+                  </a>
+                  <a
                     className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
                     href="/artist-management"
                   >
                     Artist Management
-                  </p>
-                  <p
+                  </a>
+                  <a
                     className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
                     href="/video-production"
                   >
                     Video Production
-                  </p>
+                  </a>
                 </div>
               </div>
               <p

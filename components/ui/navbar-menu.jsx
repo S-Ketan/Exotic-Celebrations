@@ -17,14 +17,27 @@ export const MenuItem = ({
   setActive,
   active,
   item,
+  href,
   children
 }) => {
+  const handleMouseEnter = () => {
+    if (setActive) {
+      setActive(item);
+    }
+  };
+
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative">
+    <div onMouseEnter={handleMouseEnter} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer hover:opacity-[0.9] dark:text-white">
-        {item}
+        {href ? (
+          <Link href={href}>
+            {item}
+          </Link>
+        ) : (
+          item
+        )}
       </motion.p>
       {active !== null && (
         <motion.div
