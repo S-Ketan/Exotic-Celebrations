@@ -1,11 +1,12 @@
 import React from "react";
 import { VortexDemo } from "./HomepageComponents/vortexBackground";
 import HomeDescription from "./HomepageComponents/HomeDescription";
-import wedding from "./Services/Weddings";
+
 import Weddings from "./Services/Weddings";
 import Corporate from "./Services/Corporate";
 import PartyPlanning from "./Services/PartyPlanning";
 import VenueManagement from "./Services/VenueManagement";
+import ArtistManagement from "./Services/ArtistManagement";
 
 const page = () => {
   return (
@@ -34,6 +35,7 @@ bg-gradient-to-b from-black via-slate-950 to-white dark:bg-none dark:bg-transpar
         <Corporate />
         <PartyPlanning />
         <VenueManagement />
+        <ArtistManagement />
       </div>
     </>
   );
