@@ -4,6 +4,7 @@ import HomeDescription from "./HomepageComponents/HomeDescription";
 import wedding from "./Services/Weddings";
 import Weddings from "./Services/Weddings";
 import Corporate from "./Services/Corporate";
+import PartyPlanning from "./Services/PartyPlanning";
 
 const page = () => {
   return (
@@ -30,6 +31,7 @@ bg-gradient-to-b from-black via-slate-950 to-white dark:bg-none dark:bg-transpar
         <HomeDescription />
         <Weddings />
         <Corporate />
+        <PartyPlanning />
       </div>
     </>
   );
