@@ -63,29 +63,29 @@ function Navbar({ className }) {
           <MenuItem setActive={setActive} active={active} item="Contact">
             <div className="text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Algochurn"
-                href="https://algochurn.com"
-                src="https://assets.aceternity.com/demos/algochurn.webp"
-                description="Prepare for tech interviews like never before."
+                title="Instagram"
+                href="https://www.instagram.com/the_exotics_celebrations"
+                src="https://i.pinimg.com/736x/2e/f6/95/2ef695843e8c040354804122b160eb28.jpg"
+                description="Connect with us on Instagram"
               />
-              <ProductItem
-                title="Tailwind Master Kit"
+             {/*  <ProductItem
+                title="Facebook"
                 href="https://tailwindmasterkit.com"
-                src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                description="Production ready Tailwind css components for your next project"
-              />
+                src="https://i.pinimg.com/736x/6c/ff/32/6cff32688581d2a75d4511dad0d56ecb.jpg"
+                description="Follow us on Facebook"
+              /> */}
               <ProductItem
-                title="Moonbeam"
+                title="Gmail"
                 href="https://gomoonbeam.com"
-                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-                description="Never write from scratch again. Go from idea to blog in minutes."
+                src="https://i.pinimg.com/736x/be/de/19/bede19e1cc44044c8eb11ecae70c5903.jpg"
+                description="Email us for any queries"
               />
-              <ProductItem
-                title="Rogue"
+            {/*   <ProductItem
+                title="LinkedIn"
                 href="https://userogue.com"
-                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                src="https://i.pinimg.com/736x/ba/72/3f/ba723fc8dfb5362956a680df14943be3.jpg"
                 description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-              />
+              /> */}
             </div>
           </MenuItem>
         </Menu>

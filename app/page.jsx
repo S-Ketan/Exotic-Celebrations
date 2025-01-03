@@ -36,7 +36,7 @@ bg-gradient-to-b from-black via-slate-950 to-white dark:bg-none dark:bg-transpar
         <Corporate />
         <PartyPlanning />
         <VenueManagement />
-        <ArtistManagement />
+        <ArtistManagement imgUrl={'/assets/images/artistManagementPic.jpeg'}/>
         <VideoProduction />
       </div>
     </>

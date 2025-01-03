@@ -4,7 +4,7 @@ import ArtistManagement from '../Services/ArtistManagement'
 const page = () => {
   return (
     <div>
-        <ArtistManagement />
+        <ArtistManagement imgUrl={'/assets/images/artistManagementPicCropped.jpeg'}/>
     </div>
   )
 }

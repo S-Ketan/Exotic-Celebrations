@@ -9,7 +9,7 @@ const VenueManagement = () => {
       >
         <div className="absolute inset-0 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 flex items-center justify-center">
           <p className="text-white dark:text-white text-2xl font-semibold">
-            Venue Management
+          VENUE MANAGEMENT
           </p>
         </div>
       </div>
