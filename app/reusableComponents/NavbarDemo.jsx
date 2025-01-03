@@ -40,7 +40,6 @@ function Navbar({ className }) {
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="/image-gallery">Image Gallery</HoveredLink>
               <HoveredLink href="/video-gallery">Videos Gallery</HoveredLink>
-              
             </div>
           </MenuItem>
           <MenuItem setActive={setActive} item="Team" href="/team" />
@@ -62,7 +61,7 @@ function Navbar({ className }) {
             </div>
           </MenuItem>
           <MenuItem setActive={setActive} active={active} item="Contact">
-            <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+            <div className="text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
                 title="Algochurn"
                 href="https://algochurn.com"
@@ -93,145 +92,148 @@ function Navbar({ className }) {
       </div>
       <button
         className={
-          " text-xl sm:hidden  text-gray-500  dark:text-white p-4 fixed top-0 right-0 " +
-          (isSidebarOpen ? "hidden" : "block")
+          "text-xl sm:hidden text-gray-500 dark:text-white p-4 fixed top-0 right-0 transition-opacity duration-300 " +
+          (isSidebarOpen ? "opacity-0" : "opacity-100")
         }
         onClick={toggleSidebar}
       >
         ☰
       </button>
-      {isSidebarOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex">
-          <div className="w-64 bg-gray-100 dark:bg-black h-full shadow-lg z-50 p-6">
-            <button
-              className="text-black dark:text-gray-500 text-2xl absolute top-4 right-4"
-              onClick={toggleSidebar}
+      <div
+        className={`fixed inset-0 bg-black bg-opacity-50 z-40 flex transition-opacity duration-300 ${
+          isSidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <div
+          className={`w-64 bg-gray-100 dark:bg-black h-full shadow-lg z-50 p-6 transition-transform duration-300 ${
+            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <button
+            className="text-black dark:text-gray-500 text-2xl absolute top-4 right-4"
+            onClick={toggleSidebar}
+          >
+            &times;
+          </button>
+          <div className="mt-10 space-y-4">
+            <a
+              className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
+              href="/"
             >
-              &times;
-            </button>
-            <div className="mt-10 space-y-4">
-              <a
-                className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
-                href="/"
+              Home
+            </a>
+            <p
+              className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
+              href="/client"
+            >
+              Client
+            </p>
+            <div>
+              <button
+                id="dropdownButton"
+                className="w-full flex justify-between rounded text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
+                onClick={() => {
+                  portfolioMenu.classList.toggle("hidden");
+                  portfolioIcon.textContent =
+                    portfolioMenu.classList.contains("hidden") ? "▼" : "▲";
+                }}
               >
-                Home
-              </a>
-              <p
-                className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
-                href="/client"
+                <span>Portfolio</span>
+                <span id="portfolioIcon">▼</span>
+              </button>
+              <div
+                id="portfolioMenu"
+                className="hidden mt-2 space-y-2 rounded transition-all duration-300 ease-in-out"
               >
-                Client
-              </p>
-              <div>
-                <button
-                  id="dropdownButton"
-                  className="w-full flex justify-between  rounded text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
-                  onClick={() => {
-                    portfolioMenu.classList.toggle("hidden");
-                    portfolioIcon.textContent =
-                      portfolioMenu.classList.contains("hidden") ? "▼" : "▲";
-                  }}
+                <p
+                  className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black"
+                  href="/image-gallery"
                 >
-                  <span>Portfolio</span>
-                  <span id="portfolioIcon">▼</span>
-                </button>
-                <div
-                  id="portfolioMenu"
-                  className="hidden  mt-2 space-y-2 rounded"
+                  Image Gallery
+                </p>
+                <p
+                  className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black"
+                  href="/video-gallery"
                 >
-                  <p
-                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
-                    href="/image-gallery"
-                  >
-                    Image Gallery
-                  </p>
-                  <p
-                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
-                    href="/video-gallery"
-                  >
-                    Videos Gallery
-                  </p>
-                </div>
+                  Videos Gallery
+                </p>
               </div>
-              <p
-                className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
-                href="/team"
-              >
-                Team
-              </p>
-              <div>
-                <button
-                  id="dropdownButton"
-                  className="w-full flex justify-between  rounded text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
-                  onClick={() => {
-                    serviceMenu.classList.toggle("hidden");
-                    serviceIcon.textContent = serviceMenu.classList.contains(
-                      "hidden"
-                    )
-                      ? "▼"
-                      : "▲";
-                  }}
-                >
-                  <span>Services</span>
-                  <span id="serviceIcon">▼</span>
-                </button>
-                <div
-                  id="serviceMenu"
-                  className="hidden  mt-2 space-y-2 rounded"
-                >
-                  <a
-                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
-                    href="/weddings"
-                  >
-                    Weddings
-                  </a>
-                  <a
-                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
-                    href="/corporate"
-                  >
-                    Corporate
-                  </a>
-                  <a
-                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
-                    href="/party-planning"
-                  >
-                    Party Planning
-                  </a>
-                  <a
-                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
-                    href="/venue-management"
-                  >
-                    Venue Management
-                  </a>
-                  <a
-                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
-                    href="/artist-management"
-                  >
-                    Artist Management
-                  </a>
-                  <a
-                    className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black "
-                    href="/video-production"
-                  >
-                    Video Production
-                  </a>
-                </div>
-              </div>
-              <p
-                className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
-                href="/contact"
-              >
-                Contact
-              </p>
             </div>
+            <p
+              className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
+              href="/team"
+            >
+              Team
+            </p>
+            <div>
+              <button
+                id="dropdownButton"
+                className="w-full flex justify-between rounded text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
+                onClick={() => {
+                  serviceMenu.classList.toggle("hidden");
+                  serviceIcon.textContent = serviceMenu.classList.contains(
+                    "hidden"
+                  )
+                    ? "▼"
+                    : "▲";
+                }}
+              >
+                <span>Services</span>
+                <span id="serviceIcon">▼</span>
+              </button>
+              <div
+                id="serviceMenu"
+                className="hidden mt-2 space-y-2 rounded transition-all duration-300 ease-in-out"
+              >
+                <a
+                  className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black"
+                  href="/weddings"
+                >
+                  Weddings
+                </a>
+                <a
+                  className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black"
+                  href="/corporate"
+                >
+                  Corporate
+                </a>
+                <a
+                  className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black"
+                  href="/party-planning"
+                >
+                  Party Planning
+                </a>
+                <a
+                  className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black"
+                  href="/venue-management"
+                >
+                  Venue Management
+                </a>
+                <a
+                  className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black"
+                  href="/artist-management"
+                >
+                  Artist Management
+                </a>
+                <a
+                  className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black"
+                  href="/video-production"
+                >
+                  Video Production
+                </a>
+              </div>
+            </div>
+            <p
+              className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
+              href="/contact"
+            >
+              Contact
+            </p>
           </div>
-          {/* Click outside sidebar to close */}
-          <div
-            className="flex-grow"
-            onClick={() => setSidebarOpen(false)}
-          ></div>
         </div>
-      )}
+        {/* Click outside sidebar to close */}
+        <div className="flex-grow" onClick={() => setSidebarOpen(false)}></div>
+      </div>
     </>
   );
 }
