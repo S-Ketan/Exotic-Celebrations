@@ -14,7 +14,7 @@ const VenueManagement = () => {
         </div>
       </div>
       <div className="m-auto sm:w-[80vw] w-full sm:p-2 p-4 mt-10 text-center ">
-        <p className="text-center text-3xl">Venue Management</p>
+        <p className="text-center text-3xl">VENUE MANAGEMENT</p>
         <p className="mt-10 font-bold text-xl text-left m-auto sm:w-[80%] ">
           VENUES AND VENUE BOOKING AGENTS
         </p>

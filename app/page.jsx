@@ -7,6 +7,7 @@ import Corporate from "./Services/Corporate";
 import PartyPlanning from "./Services/PartyPlanning";
 import VenueManagement from "./Services/VenueManagement";
 import ArtistManagement from "./Services/ArtistManagement";
+import VideoProduction from "./Services/VideoProduction";
 
 const page = () => {
   return (
@@ -36,6 +37,7 @@ bg-gradient-to-b from-black via-slate-950 to-white dark:bg-none dark:bg-transpar
         <PartyPlanning />
         <VenueManagement />
         <ArtistManagement />
+        <VideoProduction />
       </div>
     </>
   );
