@@ -1,9 +1,10 @@
 import React from "react";
+import { UnderConstruction } from "../reusableComponents/UnderConstruction";
 
 const page = () => {
   return (
     <div>
-      <div
+      {/* <div
         className="h-[60vh] bg-cover bg-center p-5 bg-fixed relative"
         style={{ backgroundImage: "url('/assets/images/eventVenue.jpg')" }}
       >
@@ -12,7 +13,8 @@ const page = () => {
             OUR TEAM
           </p>
         </div>
-      </div>
+      </div> */}
+      <UnderConstruction desc="Teams section in progress..."/>
     </div>
   );
 };

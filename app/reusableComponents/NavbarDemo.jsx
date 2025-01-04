@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   HoveredLink,
   Menu,
@@ -9,6 +9,15 @@ import {
 import { cn } from "@/lib/utils";
 
 function NavbarDemo() {
+  const [active, setActive] = useState(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
   return (
     <div className="relative w-full flex items-center justify-center z-50">
       <Navbar className="top-2" />
@@ -17,7 +26,6 @@ function NavbarDemo() {
 }
 
 export default NavbarDemo;
-
 function Navbar({ className }) {
   const [active, setActive] = useState(null);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -36,12 +44,12 @@ function Navbar({ className }) {
         <Menu setActive={setActive}>
           <MenuItem setActive={setActive} item="Home" href="/" />
           <MenuItem setActive={setActive} item="Client" href="/client" />
-          <MenuItem setActive={setActive} item="Portfolio" active={active}>
+         {/*  <MenuItem setActive={setActive} item="Portfolio" active={active}>
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink href="/image-gallery">Image Gallery</HoveredLink>
               <HoveredLink href="/video-gallery">Videos Gallery</HoveredLink>
             </div>
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem setActive={setActive} item="Team" href="/team" />
 
           <MenuItem setActive={setActive} active={active} item="Services">
@@ -76,7 +84,7 @@ function Navbar({ className }) {
               /> */}
               <ProductItem
                 title="Gmail"
-                href="https://gomoonbeam.com"
+                href="mailto:ketan10923@gmail.com"
                 src="https://i.pinimg.com/736x/be/de/19/bede19e1cc44044c8eb11ecae70c5903.jpg"
                 description="Email us for any queries"
               />
@@ -122,13 +130,13 @@ function Navbar({ className }) {
             >
               Home
             </a>
-            <p
+            <a
               className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
               href="/client"
             >
               Client
-            </p>
-            <div>
+            </a>
+            {/* <div>
               <button
                 id="dropdownButton"
                 className="w-full flex justify-between rounded text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
@@ -145,26 +153,26 @@ function Navbar({ className }) {
                 id="portfolioMenu"
                 className="hidden mt-2 space-y-2 rounded transition-all duration-300 ease-in-out"
               >
-                <p
+                <a
                   className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black"
                   href="/image-gallery"
                 >
                   Image Gallery
-                </p>
-                <p
+                </a>
+                <a
                   className="block px-4 text-lg font-semibold rounded dark:text-gray-400 text-black"
                   href="/video-gallery"
                 >
                   Videos Gallery
-                </p>
+                </a>
               </div>
-            </div>
-            <p
+            </div> */}
+            <a
               className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
               href="/team"
             >
               Team
-            </p>
+            </a>
             <div>
               <button
                 id="dropdownButton"
@@ -223,12 +231,12 @@ function Navbar({ className }) {
                 </a>
               </div>
             </div>
-            <p
+            <a
               className="block text-lg font-semibold dark:text-gray-400 text-black hover:text-yellow-500 transition"
               href="/contact"
             >
               Contact
-            </p>
+            </a>
           </div>
         </div>
         {/* Click outside sidebar to close */}
