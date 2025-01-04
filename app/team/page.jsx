@@ -8,7 +8,7 @@ const page = () => {
         style={{ backgroundImage: "url('/assets/images/eventVenue.jpg')" }}
       >
         <div className="absolute inset-0 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 flex items-center justify-center">
-          <p className="text-white dark:text-white text-2xl font-semibold">
+        <p className="text-white dark:text-white text-3xl dark:font-light font-raleway">
             OUR TEAM
           </p>
         </div>

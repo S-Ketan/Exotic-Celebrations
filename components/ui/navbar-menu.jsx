@@ -30,7 +30,7 @@ export const MenuItem = ({
     <div onMouseEnter={handleMouseEnter} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer hover:opacity-[0.9] dark:text-white">
+        className="cursor-pointer hover:opacity-[0.9] dark:text-white font-raleway text-lg">
         {href ? (
           <Link href={href}>
             {item}
@@ -108,10 +108,10 @@ export const ProductItem = ({
         alt={title}
         className="flex-shrink-0 rounded-md shadow-2xl" />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
+        <h4 className="text-xl font-bold mb-1 text-black dark:text-white font-raleway">
           {title}
         </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300 font-nunito">
           {description}
         </p>
       </div>
@@ -126,7 +126,7 @@ export const HoveredLink = ({
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black">
+      className="text-neutral-700 dark:text-neutral-200 hover:text-black font-raleway text-base">
       {children}
     </Link>
   );

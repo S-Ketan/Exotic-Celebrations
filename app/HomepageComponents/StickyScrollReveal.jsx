@@ -60,7 +60,7 @@ const content = [
                    src="/assets/images/Testimony1.png"
                     width={300}
                     height={300}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover "
                     alt="linear board demo" />
             </div>
         ),
@@ -72,6 +72,7 @@ export function StickyScrollRevealDemo() {
     return (
         <div className="p-10 scrollbar-hide">
             <StickyScroll content={content} />
+            
         </div>
     );
 }

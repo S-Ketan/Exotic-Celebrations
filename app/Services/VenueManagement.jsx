@@ -7,15 +7,15 @@ const VenueManagement = () => {
         className="h-[60vh] bg-cover bg-center p-5 bg-fixed relative"
         style={{ backgroundImage: "url('/assets/images/eventVenue.jpg')" }}
       >
-        <div className="absolute inset-0 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 flex items-center justify-center">
-          <p className="text-white dark:text-white text-2xl font-semibold">
-          VENUE MANAGEMENT
+        <div className="absolute inset-0 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 flex items-center justify-center backdrop-blur-sm">
+        <p className="text-white dark:text-white text-3xl dark:font-light font-raleway">
+          Venue Management
           </p>
         </div>
       </div>
-      <div className="m-auto sm:w-[80vw] w-full sm:p-2 p-4 mt-10 text-center ">
-        <p className="text-center text-3xl">VENUE MANAGEMENT</p>
-        <p className="mt-10 font-bold text-xl text-left m-auto sm:w-[80%] ">
+      <div className="m-auto sm:w-[80vw] w-full sm:p-2 p-4 mt-10 text-center font-nunito ">
+        <p className="text-center text-3xl font-raleway">VENUE MANAGEMENT</p>
+        <p className="mt-10 font-bold text-xl text-left m-auto sm:w-[80%] font-raleway ">
           VENUES AND VENUE BOOKING AGENTS
         </p>
         <p className=" sm:w-[80%] text-left m-auto mt-5 ">

@@ -16,6 +16,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        raleway: ['var(--font-raleway)', 'sans-serif'], // Use custom font variable
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        greatvibes: ['var(--font-greatvibes)', 'cursive'],
+        nunito: ['var(--font-nunito)', 'sans-serif'],
+      },
     },
   },
   plugins: [

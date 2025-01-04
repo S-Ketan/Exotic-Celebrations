@@ -6,9 +6,9 @@ const HomeDescription = () => {
     <div>
          <div
           className="h-[50vh] text-center flex items-center flex-col justify-center gap-10 px-2 
-dark:bg-none dark:bg-transparent dark:text-white"
+dark:bg-none dark:bg-transparent dark:text-white font-nunito"
         >
-          <p className="sm:text-3xl text-lg">
+          <p className="sm:text-3xl text-lg font-raleway">
             CREATING MEMORABLE EVENTS TAILORED TO CLIENTS
           </p>
           <p className="sm:w-[80%] text-sm">
@@ -23,8 +23,8 @@ dark:bg-none dark:bg-transparent dark:text-white"
           className="h-[50vh] bg-cover bg-center p-5 bg-fixed relative"
           style={{ backgroundImage: "url('/assets/images/happyClientPic.jpg')" }}
         >
-          <div className="absolute inset-0 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 flex items-center justify-center">
-            <p className="text-white dark:text-white text-2xl font-semibold">
+          <div className="absolute inset-0 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 flex items-center justify-center backdrop-blur-sm">
+            <p className="text-white dark:text-white text-2xl font-light font-raleway">
               HAPPY CLIENTS
             </p>
           </div>

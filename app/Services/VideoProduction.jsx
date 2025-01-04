@@ -7,14 +7,14 @@ const VideoProduction = () => {
         className="h-[60vh] bg-cover bg-center p-5 bg-fixed relative"
         style={{ backgroundImage: "url('/assets/images/videoProductionPic.jpg')" }}
       >
-        <div className="absolute inset-0 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 flex items-center justify-center">
-          <p className="text-white dark:text-white text-2xl font-semibold">
-            VIDEO PRODUCTION
+        <div className="absolute inset-0 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 flex items-center justify-center backdrop-blur-sm">
+        <p className="text-white dark:text-white text-3xl dark:font-light font-raleway">
+            Video Production
           </p>
         </div>
       </div>
-      <div className="m-auto sm:w-[80vw] w-full sm:p-2 p-4 mt-10 text-center ">
-        <p className="text-center text-3xl">VIDEO PRODUCTION</p>
+      <div className="m-auto sm:w-[80vw] w-full sm:p-2 p-4 mt-10 text-center font-nunito ">
+        <p className="text-center text-3xl font-raleway">VIDEO PRODUCTION</p>
         
         <p className=" sm:w-[80%] text-left m-auto mt-10">
         We aren’t just an events company anymore, we are proud to launch a huge new arm of our company... EAE Productions

@@ -8,14 +8,14 @@ const Weddings = () => {
         className="h-[60vh] bg-cover bg-center p-5 bg-fixed relative"
         style={{ backgroundImage: "url('/assets/images/weddingPic.jpg')" }}
       >
-        <div className="absolute inset-0 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 flex items-center justify-center">
-          <p className="text-white dark:text-white text-2xl font-semibold">
+        <div className="absolute inset-0 bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-30 flex items-center justify-center backdrop-blur-sm">
+          <p className="text-white dark:text-white text-3xl dark:font-light font-raleway">
             Weddings
           </p>
         </div>
       </div>
       <div className="m-auto sm:w-[80vw] p-3 mt-10 text-center sm:text-base text-sm ">
-        <p className="text-center text-3xl">WEDDING PACKAGES</p>
+        <p className="text-center text-3xl font-raleway">WEDDING PACKAGES</p>
         <p className="text-center sm:w-[50%]  m-auto mt-10">
           Exotic Celebrations offers a variety of packages to meet your specific
           wedding planning needs. While the packages range in services offered,
@@ -42,8 +42,8 @@ const Weddings = () => {
           can make the most of our time together and give you a great starting
           point for your planning. This consultation can last up to one hour.
         </p>
-        <p className="text-xl mt-10 font-bold">DAY OF COORDINATION</p>
-        <div className="mt-5 text-left p-2">
+        <p className="text-xl mt-10 font-bold font-raleway">DAY OF COORDINATION</p>
+        <div className="mt-5 text-left p-2 font-nunito">
           <p>
             We want you to enjoy your day. This package is designed for couples
             that would like to do all the planning themselves, but want a
@@ -85,12 +85,12 @@ const Weddings = () => {
               <li>Access to planners wedding day emergency kit </li>
             </ul>
           </ul>
-          <p className="mt-5 italic">
+          <p className="mt-5 italic ">
             UNLIMITED PHONE AND EMAIL CORRESPONDENCE
           </p>
         </div>
-        <p className="text-xl mt-10 font-bold">FULL EVENT PLANNING</p>
-        <div className="mt-5 text-left p-2">
+        <p className="text-xl mt-10 font-bold font-raleway">FULL EVENT PLANNING</p>
+        <div className="mt-5 text-left p-2 font-nunito">
           <ul className="mt-5 list-disc list-inside">
             <li>Initial Consultation</li>
             <li>
@@ -130,11 +130,11 @@ const Weddings = () => {
             UNLIMITED PHONE AND EMAIL CORRESPONDENCE
           </p>
         </div>
-        <p className="text-xl mt-10 font-bold">
+        <p className="text-xl mt-10 font-bold font-raleway">
           ABOVE AND BEYOND PLANNING PACKAGE
         </p>
 
-        <div className="mt-5 text-left p-2">
+        <div className="mt-5 text-left p-2 font-nunito">
           <ul className="mt-5 list-disc list-inside">
             <li>
               All services from the Day of Coordination and Full Event Planning
@@ -167,7 +167,7 @@ const Weddings = () => {
         </p>
         <button
           href="/contact"
-          className="bg-green-400 my-5 text-xl font-bold p-4 rounded-lg text-white"
+          className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 my-5 text-xl  font-nunito p-4 rounded-lg text-white"
         >
           Request Pricing
         </button>

@@ -24,8 +24,8 @@ const page = () => {
         </div>
         <VortexDemo />
 
-        <div className="sm:h-[35vh] h-[35vh] sm:mt-0 bg-gradient-to-b from-black via-slate-950 to-white dark:bg-none dark:bg-black text-white font-semibold text-center sm:text-5xl text-base p-4">
-          "Crafting Extraordinary Moments, One Celebration at a Time"
+        <div className="sm:h-[35vh] h-[35vh] sm:mt-0 bg-gradient-to-b from-black via-slate-950 to-white dark:bg-none dark:bg-black text-white text-center sm:text-5xl text-base p-4 font-greatvibes">
+          Crafting Extraordinary Moments, One Celebration at a Time
         </div>
         {/* <div
           className="sm:h-[30vh] h-[15vh] dark:hidden
