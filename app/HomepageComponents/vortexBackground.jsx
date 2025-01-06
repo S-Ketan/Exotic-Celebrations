@@ -24,9 +24,11 @@ export function VortexDemo() {
           className="rounded-md mt-4"
         />
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+          <a href="/team">
           <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset] font-nunito text-base">
             About Us
           </button>
+          </a>
         </div>
       </Vortex>
     </div>
